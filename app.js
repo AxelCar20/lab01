@@ -22,3 +22,5 @@ btnSi.addEventListener('click', function(e) {
     imgd.src = "img/img2.png";
 
 })
+
+//Comentario de prueba

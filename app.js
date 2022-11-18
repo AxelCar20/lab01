@@ -12,6 +12,8 @@ let divContainer = document.getElementsByName("div_container")[0];
 let imgd = document.getElementById("img-prueba");
 
 
+
+
 btnNo.addEventListener('mouseenter', function(e) { 
     moverposicionrandom(e.target) 
 });
@@ -23,10 +25,36 @@ btnSi.addEventListener('click', function(e) {
 
 })
 
-//Comentario de prueba
 
-console.log("Hola_mundo8");
+window.addEventListener('beforeunload',(event) => {
+    event.preventDefault();
+    event.returnValue = "";
+});
 
-console.log("Hola_mundo9");
+/*Practica*/
+let arraynum = [95,30,82,15,35];
+let promedioNota = 0;
+let NotaMayor = 0;
+let Notamenor = 0;
+let NotasCantidad = arraynum.length;
+
+//ordenamos el array
+arraynum.sort();
+
+//Buscamos el promedio
+for(let i = 0; i <= arraynum.length-1; i++){
+    promedioNota = promedioNota + arraynum[i];
+}
+
+promedioNota = (promedioNota/arraynum.length)
+
+console.log("El promedio de las notas es de: " + promedioNota);
+Notamenor = arraynum[0];
+console.log("La nota menor obtenida es de: " + Notamenor);
+NotaMayor = arraynum[arraynum.length-1];
+console.log("La nota mayor obtenida es de: " + NotaMayor);
+
+
+
 
 
